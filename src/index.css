@@ -1,1 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+/* font-family: 'Barlow', sans-serif; */
 
+:root {
+  --charcoal: #282b32;
+  --green: #21bf74;
+  --white: #dfeaff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--charcoal);
+}
+
+h2 {
+  font-family: "Barlow", sans-serif;
+  font-size: 24px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5vh;
+  padding: 50px;
+  background: #21bf74;
+  background: linear-gradient(164deg, #21bf74 0%, #282b32 50%);
+  background: -webkit-linear-gradient(164deg, #21bf74 0%, #282b32 50%);
+  background: -moz-linear-gradient(164deg, #21bf74 0%, #282b32 50%);
+  box-shadow: -1px 10px 82px -37px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -1px 10px 82px -37px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 10px 82px -37px rgba(0, 0, 0, 0.75);
+}
