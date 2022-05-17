@@ -2,7 +2,7 @@ import React from 'react';
 
 const SummaryHeading = () => {
     return (
-        <div className='heading'>
+        <div className='sum-heading'>
             <h1>Summary</h1>
             <h2>A summarised view of your budget.</h2>
         </div>

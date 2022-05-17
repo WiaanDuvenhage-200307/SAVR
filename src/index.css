@@ -5,6 +5,7 @@
   --charcoal: #282b32;
   --green: #21bf74;
   --white: #dfeaff;
+  --light-charcoal: #5A5A5A;
 }
 
 * {
@@ -12,8 +13,9 @@
   padding: 0;
 }
 
-body {
-  background-color: var(--charcoal);
+
+body{
+    background: var(--charcoal)
 }
 
 h2 {
@@ -146,4 +148,63 @@ h3{
 .scroll-down__icon{
     font-size: 36px;
     color: var(--white);
+}
+
+.sum-heading{
+    margin-left: 50px;
+}
+
+.sum-heading h1{
+    font-size: 48px;
+}
+
+.sum-heading h2{
+    font-weight: lighter;
+}
+
+.total-income{
+    background-color: var(--light-charcoal);
+    border-radius: 14px;
+    width: 10%;
+    color: var(--white);
+    padding: 20px;
+    margin-top: 10px;
+    margin-left: 50px;
+    text-align: center;
+    float: left;
+}
+
+.total-income h2{
+    font-size: 36px;
+}
+
+.month-expenses{
+    width: 70%;
+    float: right;
+    background-color: var(--light-charcoal);
+    padding: 20px;
+    text-align: left;
+    margin-right: 50px;
+    border-radius: 20px;
+}
+
+.month-expenses h1{
+    font-size: 36px;
+}
+
+.dropdown{
+    background-color: var(--white);
+    color: var(--charcoal);
+    border: none;
+    padding: 10px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: bold;
+    outline: none;
+    border-radius: 20px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
