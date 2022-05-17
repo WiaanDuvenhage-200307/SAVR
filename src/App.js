@@ -1,14 +1,20 @@
-import AverageForm from './components/AverageForm';
-import Link from './components/Link';
+
 import Nav from './components/Nav';
+import WelcomeMessage from './components/UI/WelcomeMessage';
+import Date from './components/UI/Date';
+import HouseholdIncome from './components/UI/HouseholdIncome';
+import Scrolldown from './components/UI/Scrolldown';
+import SummaryHeading from './components/UI/SummaryHeading';
 
 function App() {
   return (
     <div className="App">
       <Nav/>
-      <Link page="https://facebook.com">Facebook</Link>
-
-      <AverageForm/>
+      <Date/>
+      <WelcomeMessage/>
+      <HouseholdIncome/>
+      <Scrolldown/>
+      <SummaryHeading/>
     </div>
   );
 }
