@@ -14,7 +14,7 @@ const HouseholdIncome = () => {
                     <IconButton aria-label="delete"><DeleteIcon/></IconButton>
                 </div>
             </div>
-            <Button name="Add +" className="button"/>
+            <Button name="Add Member" className="button"/>
         </div>
     );
 };

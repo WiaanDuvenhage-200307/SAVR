@@ -7,6 +7,7 @@ import Scrolldown from './components/UI/Scrolldown';
 import SummaryHeading from './components/UI/SummaryHeading';
 import TotalIncome from './components/UI/TotalIncome';
 import MonthlyExpenses from './components/UI/MonthlyExpenses';
+import SumForm from './components/SumForm';
 
 function App() {
   return (

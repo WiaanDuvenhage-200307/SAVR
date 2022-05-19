@@ -1,26 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
-/* font-family: 'Barlow', sans-serif; */
-
-:root {
-  --charcoal: #282b32;
-  --green: #21bf74;
-  --white: #dfeaff;
-  --light-charcoal: #5A5A5A;
-}
+@import './assets/base.scss';
 
 * {
   margin: 0;
   padding: 0;
 }
 
-
 body{
-    background: var(--charcoal)
+    background: $charcoal;
 }
 
 h2 {
   font-family: "Barlow", sans-serif;
   font-size: 24px;
+  color: $white;
 }
 
 .nav {
@@ -29,10 +22,10 @@ h2 {
   align-items: center;
   height: 5vh;
   padding: 50px;
-  background: #21bf74;
-  background: linear-gradient(164deg, #21bf74 0%, #282b32 50%);
-  background: -webkit-linear-gradient(164deg, #21bf74 0%, #282b32 50%);
-  background: -moz-linear-gradient(164deg, #21bf74 0%, #282b32 50%);
+  background: $green;
+  background: linear-gradient(164deg, $green 0%, $charcoal 50%);
+  background: -webkit-linear-gradient(164deg, $green 0%, $charcoal 50%);
+  background: -moz-linear-gradient(164deg, $green 0%, $charcoal 50%);
   box-shadow: -1px 10px 82px -37px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: -1px 10px 82px -37px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -1px 10px 82px -37px rgba(0, 0, 0, 0.75);
@@ -41,16 +34,12 @@ h2 {
 h1{
     font-family: 'Barlow', sans-serif;
     font-size: 72px;
-    color: var(--white);
-}
-
-h2{
-    color: var(--green);
+    color: $white;
 }
 
 h3{
     font-family: 'Barlow', sans-serif;
-    color: var(--white);
+    color: $white;
 }
 
 .date{
@@ -59,7 +48,7 @@ h3{
 }
 
 .month-end{
-    background-color: var(--green);
+    background-color: $green;
     width: 160px;
     padding: 5px;
     border-radius: 3px;
@@ -67,134 +56,132 @@ h3{
 
 /* Household Income Styling TOP OF PAGE */
 .house-income{
-    background-color: #5A5A5A;
+    background-color: $light-charcoal;
     width: 40%;
     padding: 10px;
     border-radius: 10px;
     margin-left: 20px;
     float: left;
-}
-
-.house-income__heading{
-    font-size: 36px;
-    text-align: center;
-    color: var(--green);
-}
-
-.house-income__members{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px;
-    padding: 10px;
+    flex-direction: column;
+
+    .house-income__heading{
+        font-size: 36px;
+        text-align: center;
+        color: $green;
+    }
+
+    .house-income__members{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px;
+        padding: 10px;
+
+        h2{
+            margin-right: 10px;
+            color: $white;
+            font-weight: lighter;
+        }
+    }
+
+    .house-income__money{
+        font-size: 36px;
+    }
+
+    .house-income_delete{
+        display: flex;
+    }
+    
 }
 
-.house-income__members h2{
-    margin-right: 10px;
-    color: var(--white);
-    font-weight: lighter;
-}
-
-.house-income__money{
-    font-size: 36px;
-}
-
-.house-income_delete{
-    display: flex;
-}
 
 /* Welcome Message Styling */
 .welcome{
     width: 50%;
     padding: 50px;
     float: left;
-}
 
-.welcome h2{
-    font-weight: lighter;
+    h2{
+        font-weight: lighter;
+    }
 }
 
 .button{
-    width: 200px;
-    background-color: var(--green);
-    padding: 30px;
+    padding: 11px 33px;
+    background-color: $green;
     border-radius: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: 'Barlow', sans-serif;
     font-weight: bold;
     border: none;
-    margin: 0 auto;
     font-size: 24px;
-    position: relative;
     top: 30px;
+
+    &:hover{
+        background-color: $white;
+        transition: 0.1s ease-in-out;
+    }
 }
 
-.button:hover{
-    background-color: var(--white);
-    transition: 0.1s ease-in-out;
-}
 
 .scroll-down{
     text-align: center;
     font-family: 'Barlow', sans-serif;
     width: 100px;
     margin: 0 auto;
-    color: var(--white);
-}
+    color: $white;
 
-.scroll-down__icon{
-    font-size: 36px;
-    color: var(--white);
+    .scroll-down__icon{
+        font-size: 36px;
+        color: $white;
+    }
 }
 
 .sum-heading{
     margin-left: 50px;
-}
 
-.sum-heading h1{
-    font-size: 48px;
-}
+    h1{
+        font-size: 48px;
+    }
 
-.sum-heading h2{
-    font-weight: lighter;
+    h2{
+        font-weight: lighter;
+    }
 }
 
 .total-income{
-    background-color: var(--light-charcoal);
+    background-color: $light-charcoal;
     border-radius: 14px;
     width: 10%;
-    color: var(--white);
+    color: $white;
     padding: 20px;
     margin-top: 10px;
     margin-left: 50px;
     text-align: center;
     float: left;
-}
-
-.total-income h2{
-    font-size: 36px;
+    
+    h2{
+        font-size: 36px;
+    }
 }
 
 .month-expenses{
     width: 70%;
     float: right;
-    background-color: var(--light-charcoal);
+    background-color: $light-charcoal;
     padding: 20px;
     text-align: left;
     margin-right: 50px;
     border-radius: 20px;
-}
 
-.month-expenses h1{
-    font-size: 36px;
+    h1{
+        font-size: 36px;
+    }
 }
 
 .dropdown{
-    background-color: var(--white);
-    color: var(--charcoal);
+    background-color: $white;
+    color: $charcoal;
     border: none;
     padding: 10px;
     font-family: 'Barlow', sans-serif;
