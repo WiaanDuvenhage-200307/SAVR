@@ -1,5 +1,6 @@
 import React from 'react';
 import Dropdown from './Dropdown';
+import Button from './Button';
 
 const MonthlyExpenses = () => {
     return (
@@ -7,6 +8,7 @@ const MonthlyExpenses = () => {
             <div className="row">
                 <h1>Monthly Expenses</h1>
                 <Dropdown/>
+                <Button className="button" name="Add Expense"/>
             </div>
         </div>
     );

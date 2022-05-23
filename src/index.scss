@@ -195,3 +195,19 @@ h3{
     justify-content: space-between;
     align-items: center;
 }
+
+.tax-bracket{
+    width: 90%;
+    float: left;
+    background-color: $light-charcoal;
+    padding: 20px;
+    text-align: left;
+    margin-top: 20px;
+    margin-right: 20px;
+    border-radius: 20px;
+    text-align: center;
+
+    h1{
+        font-size: 36px;
+    }
+}
