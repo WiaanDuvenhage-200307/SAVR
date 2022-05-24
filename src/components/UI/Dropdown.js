@@ -1,8 +1,5 @@
-import React, {useState} from 'react';
 
 const Dropdown = () => {
-
-    const[month, setMonth] = useState("Please Select");
 
     return (
         <select className="dropdown">

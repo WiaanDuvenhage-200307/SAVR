@@ -29,6 +29,7 @@ const AverageForm = () => {
         var average = Calculations(formValues);
         setCurrentAverage(average);
     }
+    
     return (
         <div>
             {/* Inputs */}

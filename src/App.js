@@ -3,7 +3,6 @@ import Nav from './components/Nav';
 import WelcomeMessage from './components/UI/WelcomeMessage';
 import Date from './components/UI/Date';
 import HouseholdIncome from './components/UI/HouseholdIncome';
-import Scrolldown from './components/UI/Scrolldown';
 import SummaryHeading from './components/UI/SummaryHeading';
 import TotalIncome from './components/UI/TotalIncome';
 import MonthlyExpenses from './components/UI/MonthlyExpenses';
@@ -19,7 +18,6 @@ function App() {
       <Date/>
       <WelcomeMessage/>
       <HouseholdIncome/>
-      <Scrolldown/>
       <SummaryHeading/>
       <TotalIncome/>
       <MonthlyExpenses/>

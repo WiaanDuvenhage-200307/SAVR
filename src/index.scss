@@ -91,6 +91,12 @@ h3{
 
     .house-income_delete{
         display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h2{
+            font-size: 36px;
+        }
     }
     
 }
@@ -139,6 +145,8 @@ h3{
 
 .sum-heading{
     margin-left: 50px;
+    float: left;
+    width: 100%;
 
     h1{
         font-size: 48px;
@@ -159,7 +167,7 @@ h3{
     margin-left: 50px;
     text-align: center;
     float: left;
-    
+
     h2{
         font-size: 36px;
     }
@@ -173,6 +181,7 @@ h3{
     text-align: left;
     margin-right: 50px;
     border-radius: 20px;
+
 
     h1{
         font-size: 36px;
@@ -210,4 +219,16 @@ h3{
     h1{
         font-size: 36px;
     }
+}
+
+// Input Styling
+input{
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid $white;
+    border-radius: 20px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: $white;
 }
