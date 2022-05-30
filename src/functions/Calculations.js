@@ -1,4 +1,4 @@
-const Calculations = (numbers) => {
+export const Calculations = (numbers) => {
 
     let sum = 0;
 
@@ -9,4 +9,9 @@ const Calculations = (numbers) => {
     return sum / numbers.length;
 }
 
-export default Calculations;
+export const sumCalculation = (numberA, numberB) => {
+    // return numberA + numberB;
+    return parseInt(numberA) + parseInt(numberB);
+}
+
+// export default Calculations;

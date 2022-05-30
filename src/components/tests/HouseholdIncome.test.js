@@ -21,9 +21,9 @@ describe("Testing our form interaction...", () => {
         const amountInput = screen.getByLabelText(/income/i); // targeting the 'income' input
 
         userEvent.type(fullNameInput, "Wiaan Duvenhage"); // typing in values to 'names' input
-        userEvent.type(amountInput, "3453"); // typing in values to 'income' input
+        userEvent.type(amountInput, "3452"); // typing in values to 'income' input
 
         expect(fullNameInput.value).toBe("Wiaan Duvenhage"); //checking to see if the input is reading the value correctly
-        expect(amountInput.value).toBe("3453"); //checking to see if the input is reading the value correctly
+        expect(amountInput.value).toBe("3452"); //checking to see if the input is reading the value correctly
     })
 })
