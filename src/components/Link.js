@@ -1,16 +1,16 @@
-import React, {useState} from 'react';
+// import React, {useState} from 'react';
 
-const Link = ({page, children}) => {
+// const Link = ({page, children}) => {
 
-    const [status, setStatus] = useState("normal");
+//     const [status, setStatus] = useState("normal");
 
-    // (condition) ? do this if true : do this if false
+//     // (condition) ? do this if true : do this if false
 
-    return (
-        <a href={page} onMouseEnter={() => setStatus("hovered")} onMouseLeave={() => setStatus("normal")}>
-            {children}
-        </a>
-    );
-};
+//     return (
+//         <a href={page} onMouseEnter={() => setStatus("hovered")} onMouseLeave={() => setStatus("normal")}>
+//             {children}
+//         </a>
+//     );
+// };
 
-export default Link;
+// export default Link;

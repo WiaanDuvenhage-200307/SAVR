@@ -1,8 +1,10 @@
 
 import Nav from './components/Nav';
-import WelcomeMessage from './components/UI/WelcomeMessage';
 import Date from './components/UI/Date';
-import HouseholdIncome from './components/UI/HouseholdIncome';
+import SummaryHeading from './components/UI/SummaryHeading';
+import TaxBracket from './components/UI/TaxBracket';
+import WelcomeCom from './components/UI/WelcomeCom';
+// import AverageForm from './components/AverageForm';
 
 
 function App() {
@@ -10,8 +12,10 @@ function App() {
     <div className="App">
       <Nav/>
       <Date/>
-      <WelcomeMessage/>
-      <HouseholdIncome/>
+      <WelcomeCom/>
+      <SummaryHeading/>
+      <TaxBracket/>
+      {/* <AverageForm/> */}
     </div>
   );
 }

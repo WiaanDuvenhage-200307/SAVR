@@ -3,6 +3,7 @@ import Button from './Button';
 import { IconButton } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete'
 import { useState } from 'react';
+import Input from './Input';
 
 const HouseholdIncome = () => {
 
@@ -16,10 +17,10 @@ const HouseholdIncome = () => {
         <div className='house-income'>
             <h1 className='house-income__heading'>HOUSEHOLD INCOME</h1>
             <div className='house-income__members'>
-                <input aria-label='names' type="text" name="names" id="names" placeholder='Full Name'/> 
+                <Input className='house-income-input' ariaLabel='names' type='text' placeholder='Full Name'/> 
                 <div className='house-income_delete'>
                     <h2>$</h2>
-                    <input aria-label='income' type="number" name="income" id="income" placeholder='Amount'/>
+                    <Input className='house-income-input' ariaLabel='income' type='number' placeholder='Amount'/>
                     <IconButton aria-label="delete"><DeleteIcon/></IconButton>
                 </div>
                 
