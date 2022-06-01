@@ -1,5 +1,5 @@
 import renderer from 'react-test-renderer';
-import Link from "../Link";
+import Link from '../classActivities/Link';
 
 // Test to see if our component rendered correctly
 describe('Testing the link component....', () => { 

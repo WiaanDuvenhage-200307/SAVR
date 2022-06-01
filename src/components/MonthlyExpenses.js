@@ -1,7 +1,7 @@
 import React from 'react';
-import Dropdown from './Dropdown';
-import Button from './Button';
-import Input from './Input';
+import Dropdown from './UI/Dropdown';
+import Button from './UI/Button';
+import Input from './UI/Input';
 
 const MonthlyExpenses = () => {
     return (
@@ -23,7 +23,7 @@ const MonthlyExpenses = () => {
                     <td><Dropdown/></td>
                     <td>$<Input className='month-expenses-input' ariaLabel='expense-input' type='number' placeholder='Amount'/></td>
                 </tr>
-
+                <tr><Button/></tr>
             </table>
         </div>
     );

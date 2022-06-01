@@ -1,6 +1,6 @@
 import React from 'react';
-import Graph from '../../assets/save.svg';
-import Input from '@mui/material/Input';
+import Graph from '../assets/save.svg';
+import Input from './UI/Input';
 
 export default function Savings() {
   return (

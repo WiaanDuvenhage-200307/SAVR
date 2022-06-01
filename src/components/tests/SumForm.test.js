@@ -1,4 +1,4 @@
-// import SumForm from '../SumForm';
+// import SumForm from '../classActivities/SumForm';
 // import { render, screen } from '@testing-library/react'
 // import userEvent from '@testing-library/user-event';
 // // describe("A suite", function() {

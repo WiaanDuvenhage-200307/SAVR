@@ -1,9 +1,9 @@
 import React from 'react';
-import Button from './Button';
+import Button from './UI/Button';
 import { IconButton } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete'
 import { useState } from 'react';
-import Input from './Input';
+import Input from './UI/Input';
 
 const HouseholdIncome = () => {
 
