@@ -23,7 +23,7 @@ const MonthlyExpenses = () => {
         <div className="month-expenses">
             <div className="row">
                 <h1>Monthly Expenses</h1>
-                <Dropdown/>
+                <Dropdown />
             </div>
             <table className='table'>
                 <tr>
