@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
-import Calculations from '../functions/Calculations';
+import { Calculations } from '../../functions/Calculations';
 
 const AverageForm = () => {
 
-    const [formValues, setFormValues] = useState([0, 2]);
+    const [formValues, setFormValues] = useState([0]);
     const[currentAverage, setCurrentAverage] = useState();
 
     const handleInputChange = (newNumber, index) => {

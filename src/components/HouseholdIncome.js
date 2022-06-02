@@ -7,25 +7,44 @@ import Input from './UI/Input';
 
 const HouseholdIncome = () => {
 
-    const [input, setInputs] = useState([]);
+    const [formValues, setFormValues] = useState([0]);
 
-    const addNewMember = () => {
+    const [status, setStatus] = useState("normal");
 
+    const handleInputChange = (newNumber, index) => {
+        let changingFormValue = formValues;
+        changingFormValue[index] = newNumber;
+
+        console.log(changingFormValue);
+        setFormValues(changingFormValue);
+    }
+    
+    const addNewNumber  = () =>{
+        setFormValues([...formValues, 0])
+    }
+
+    
+    const removeNumberFromArray = (index) => {
+        var changingFormValue = formValues;
+        setFormValues(changingFormValue.splice(index, 1));
+        console.log("clicked");
     }
 
     return (
         <div className='house-income'>
             <h1 className='house-income__heading'>HOUSEHOLD INCOME</h1>
             <div className='house-income__members'>
-                <Input className='house-income-input' ariaLabel='names' type='text' placeholder='Full Name'/> 
-                <div className='house-income_delete'>
-                    <h2>$</h2>
-                    <Input className='house-income-input' ariaLabel='income' type='number' placeholder='Amount'/>
-                    <IconButton aria-label="delete"><DeleteIcon/></IconButton>
-                </div>
+                {formValues.map((number, index) => (
+                    <div key={index}>
+                        <Input className='house-income-input' onChange={(e) => handleInputChange(e.target.value)} ariaLabel='names' type='text' placeholder='Full Name'/>
+                        <label htmlFor='amount'>$</label>
+                        <Input className='house-income-input' onChange={(e) => handleInputChange(+e.target.value)} name='amount' ariaLabel='income' type='text' placeholder='Amount'/>
+                        <IconButton aria-label="delete" onClick={removeNumberFromArray}><DeleteIcon/></IconButton>
+                    </div>
+                ))}
                 
             </div>
-            <Button onClick={addNewMember} name="Add Member" className="button"/>
+            <Button function={()=> addNewNumber(true)}  name="Add Member" className="button" onMouseEnter={() => setStatus("hovered")} onMouseLeave={() => setStatus("normal")} role="Button" btnName="addMemberBtn"/>
         </div>
     );
 };

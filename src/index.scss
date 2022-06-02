@@ -93,6 +93,7 @@ h3{
 
     .house-income__members{
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         align-items: center;
         margin: 10px;
@@ -101,7 +102,15 @@ h3{
         h2{
             margin-right: 10px;
             color: $white;
+            font-size: 36px;
             font-weight: lighter;
+        }
+
+        label{
+            font-size: 36px;
+            color: $green;
+            font-family: 'Oswald', sans-serif;
+            margin-left: 20px;
         }
     }
 
@@ -210,6 +219,15 @@ table{
     td{
         font-family: 'Lato', sans-serif;
         border-bottom: 1px solid $white;
+    }
+
+    p{
+        float: left;
+        flex-direction: row;
+        align-items: center;
+        font-size: 36px;
+        font-family: 'Oswald', sans-serif;
+        color: $green;
     }
     
 }

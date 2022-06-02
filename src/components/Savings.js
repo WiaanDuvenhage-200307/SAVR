@@ -10,7 +10,7 @@ export default function Savings() {
             <h2>To become a real SAVR, you need to plan how you much you are going <br /> to save up.
                 Enter below the percentage of your budget that you <br /> want to save.
             </h2>
-            <img src={Graph} width={300}/>
+            <img src={Graph} width={500} style={{marginLeft: "100px"}}/>
         </div>
         <div className="right">
             <div className="card">
