@@ -13,11 +13,13 @@ export default function Savings() {
             <img src={Graph} width={500} style={{marginLeft: "100px"}}/>
         </div>
         <div className="right">
+            <h3>Months</h3>
             <div className="card">
+                <h2>January</h2>
                 <h1>$2345</h1>
                 <label htmlFor="savings-input">How much do you want to save</label>
                 <Input ariaLabel='savings-input' type='number' placeholder='how much?'/>
-                <h2>January</h2>
+
             </div>
             <div className="card">
                 <h1>$2345</h1>

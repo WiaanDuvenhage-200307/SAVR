@@ -4,6 +4,7 @@ import { IconButton } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete'
 import { useState } from 'react';
 import Input from './UI/Input';
+import { countTogether } from '../functions/Calculations';
 
 const HouseholdIncome = () => {
 
@@ -11,41 +12,77 @@ const HouseholdIncome = () => {
 
     const [status, setStatus] = useState("normal");
 
-    const handleInputChange = (newNumber, index) => {
-        let changingFormValue = formValues;
-        changingFormValue[index] = newNumber;
+    const [inputList, setInputList] = useState([{ names: "", income: null }]);
 
-        console.log(changingFormValue);
-        setFormValues(changingFormValue);
+    const [total, setTotal] = useState(null);
+ 
+    // handle input change
+    const handleInputChange = (e, index) => {
+
+      const { name, value } = e.target;
+      const list = [...inputList];
+      list[index][name] = value;
+      console.log(list);
+      setInputList(list);
+      var sum = null;
+
+    };
+   
+    // handle click event of the Remove button
+    const handleRemoveClick = index => {
+      const list = [...inputList];
+      list.splice(index, 1);
+      setInputList(list);
+    };
+   
+    // handle click event of the Add button
+    const handleAddClick = () => {
+      setInputList([...inputList, { names: "", income: "" }]);
+    };
+
+    const countNumTogether = () => {
+        for(let i = 0; i < inputList.length; i++){
+            setTotal(countTogether(inputList));
+            console.log(total);
+        }
     }
     
-    const addNewNumber  = () =>{
-        setFormValues([...formValues, 0])
-    }
-
-    
-    const removeNumberFromArray = (index) => {
-        var changingFormValue = formValues;
-        setFormValues(changingFormValue.splice(index, 1));
-        console.log("clicked");
-    }
 
     return (
         <div className='house-income'>
-            <h1 className='house-income__heading'>HOUSEHOLD INCOME</h1>
-            <div className='house-income__members'>
-                {formValues.map((number, index) => (
-                    <div key={index}>
-                        <Input className='house-income-input' onChange={(e) => handleInputChange(e.target.value)} ariaLabel='names' type='text' placeholder='Full Name'/>
-                        <label htmlFor='amount'>$</label>
-                        <Input className='house-income-input' onChange={(e) => handleInputChange(+e.target.value)} name='amount' ariaLabel='income' type='text' placeholder='Amount'/>
-                        <IconButton aria-label="delete" onClick={removeNumberFromArray}><DeleteIcon/></IconButton>
+            <h1 className='house-income__heading'>Household Income</h1>
+            {inputList.map((x, i) => {
+                return (
+                    <div>
+                        
+                        <div className='house-income__members'>
+                            <input
+                                className="house-income-input"
+                                name="names"
+                                aria-label='name'
+                                placeholder="Name"
+                                value={x.names}
+                                onChange={e => handleInputChange(e, i)}
+                            />
+                            <input
+                                className="house-income-input"
+                                name="income"
+                                aria-label='income'
+                                placeholder="Income"
+                                value={x.income}
+                                onChange={e => handleInputChange(e, i)}
+                            />
+                        </div>
+                       
+                        {inputList.length !== 1 && <button
+                            className="button"
+                            onClick={() => handleRemoveClick(i)}>Remove</button>}
+                        {inputList.length - 1 === i && <button className="button" onClick={handleAddClick}>Add Member</button>}
                     </div>
-                ))}
-                
-            </div>
-            <Button function={()=> addNewNumber(true)}  name="Add Member" className="button" onMouseEnter={() => setStatus("hovered")} onMouseLeave={() => setStatus("normal")} role="Button" btnName="addMemberBtn"/>
+                );
+            })}
         </div>
+
     );
 };
 

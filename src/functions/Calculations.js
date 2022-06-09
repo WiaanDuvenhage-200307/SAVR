@@ -1,17 +1,10 @@
-export const Calculations = (numbers) => {
+export const countTogether = (j) => {
+    let total = null;
 
-    let sum = 0;
+        for( let i = 0; i < j.length; i++){
+            total += +j[i];
+        }
 
-    for (let i = 0; i < numbers.length; i++) {
-        sum += numbers[i];
-    }
+    return +total;
 
-    return sum / numbers.length;
 }
-
-export const sumCalculation = (numberA, numberB) => {
-    // return numberA + numberB;
-    return parseInt(numberA) + parseInt(numberB);
-}
-
-// export default Calculations;

@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing our form interaction... See if button changes color.. 1`] = `
+<button
+  className="button"
+  name="Add Member"
+>
+  Add Member
+</button>
+`;

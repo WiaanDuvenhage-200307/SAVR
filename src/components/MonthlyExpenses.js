@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import Dropdown from './UI/Dropdown';
 import Button from './UI/Button';
-import Input from './UI/Input';
 
 const MonthlyExpenses = () => {
 
@@ -23,7 +21,6 @@ const MonthlyExpenses = () => {
         <div className="month-expenses">
             <div className="row">
                 <h1>Monthly Expenses</h1>
-                <Dropdown />
             </div>
             <table className='table'>
                 <tr>
@@ -34,14 +31,13 @@ const MonthlyExpenses = () => {
                 </tr>
                 {tableValues.map((number, index) =>(
                     <tr>
-                        <td></td>
-                        <td><Input className='month-expenses-input' onChange={(e) => handleInputChange(e.target.value)} ariaLabel='expense-name' type='text' placeholder='Please Enter'/></td>
-                        <td></td>
-                        <td><p>$</p><Input className='month-expenses-input' onChange={(e) => handleInputChange(+e.target.value)} ariaLabel='expense-amount' type='number' placeholder='Amount'/></td>
+                        <td><input type="text" placeholder='Name'/></td>
+                        <td><input className='month-expenses-input' onChange={(e) => handleInputChange(e.target.value)} ariaLabel='expense-name' type='text' placeholder='Please Enter'/></td>
+                        <td><p>$</p><input className='month-expenses-input' onChange={(e) => handleInputChange(+e.target.value)} ariaLabel='expense-amount' type='number' placeholder='Amount'/></td>
                     </tr>
                 ))}
 
-                <tr><Button function={()=> addNewRow(true)} name="Add Expense" className="button"/></tr>
+                <tr><button function={()=> addNewRow(true)} name="Add Expense" className="button"/></tr>
             </table>
         </div>
     );
