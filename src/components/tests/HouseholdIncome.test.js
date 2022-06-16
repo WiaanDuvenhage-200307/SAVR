@@ -16,9 +16,9 @@ describe("Testing our form interaction...", () => {
     })
 
     test("checking to see if the value we type gets read...", () => {
-
-        const fullNameInput = screen.getByPlaceholderText(/Name/i); //targeting the 'names' input
-        const amountInput = screen.getByPlaceholderText(/Income/i); //targeting the 'income' input
+        render(<HouseholdIncome/>);
+        const fullNameInput = screen.getByLabelText(/name/i); //targeting the 'names' input
+        const amountInput = screen.getByLabelText(/Income/i); //targeting the 'income' input
 
         userEvent.type(fullNameInput, "Wiaan Duvenhage"); // typing in values to 'names' input
         userEvent.type(amountInput, "3452"); // typing in values to 'income' input
@@ -28,6 +28,7 @@ describe("Testing our form interaction...", () => {
     })
 
     test("Testing to see if tapping the button works...", () => {
+        render(<HouseholdIncome/>);
         const addButton = screen.getByText(/Add Member/i);
 
        const clickedBtn =  fireEvent.click(screen.getByText('Add Member'));
@@ -37,7 +38,7 @@ describe("Testing our form interaction...", () => {
     test("See if button changes color..", () => {
         //1. Create/render our component (as you would in the return of a component)
         const component = renderer.create(
-            <button name="Add Member" className="button">Add Member</button>
+            <Button className="button">Remove</Button>
         );
 
         // Rendering the component as json so we can investigate it
@@ -50,11 +51,13 @@ describe("Testing our form interaction...", () => {
 
         // trigger the hover of our component
         renderer.act(() => {
-            component.onMouseEnter();
+            tree.props.onMouseEnter();
         });
 
         // re-render the tree
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
     })
+
+
 })

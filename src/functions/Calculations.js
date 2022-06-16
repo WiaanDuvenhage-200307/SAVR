@@ -1,10 +1,21 @@
-export const countTogether = (j) => {
-    let total = null;
+export default function countTogether(numbers){
+    let sum = 0;
 
-        for( let i = 0; i < j.length; i++){
-            total += +j[i];
-        }
+    for( let i = 0; i < numbers.length; i++){
+        sum += numbers[i];
+    }
 
-    return +total;
+    return sum;
 
 }
+
+export function average(numbers){
+    let sum = 0;
+
+    for( let i = 0; i < numbers.length; i++){
+        sum += numbers[i];
+    }
+
+    return sum/numbers.length;
+}
+

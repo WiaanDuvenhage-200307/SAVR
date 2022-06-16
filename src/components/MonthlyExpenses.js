@@ -31,13 +31,17 @@ const MonthlyExpenses = () => {
         {tableValues.map((number, index) => (
           <tr>
             <td>
-              <input type="text" placeholder="Name" />
+                <input 
+                    type="text"
+                    placeholder="Name" 
+                    aria-label="name"
+                />
             </td>
             <td>
               <input
                 className="month-expenses-input"
                 onChange={(e) => handleInputChange(e.target.value)}
-                ariaLabel="expense-name"
+                aria-label="expense-input"
                 type="text"
                 placeholder="Please Enter"
               />
@@ -47,7 +51,7 @@ const MonthlyExpenses = () => {
               <input
                 className="month-expenses-input"
                 onChange={(e) => handleInputChange(+e.target.value)}
-                ariaLabel="expense-amount"
+                aria-label="amount"
                 type="number"
                 placeholder="Amount"
               />
