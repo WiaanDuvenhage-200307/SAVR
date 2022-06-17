@@ -6,6 +6,7 @@ const MonthlyExpenses = () => {
 
   const addNewRow = () => {
     setTableValues([...tableValues, 0]);
+    console.log("fired");
   };
 
   const handleInputChange = (newNumber, index) => {
@@ -55,13 +56,16 @@ const MonthlyExpenses = () => {
         ))}
 
         <tr>
-          <button
-            function={() => addNewRow(true)}
+            <button
             name="Add Expense"
             className="button"
-          >
+            onClick={addNewRow}
+            >
+
             Add Expense
-          </button>
+
+            </button>
+
         </tr>
       </table>
     </div>

@@ -1,6 +1,6 @@
 
 import Nav from './components/Nav';
-import Date from './components/Date';
+import TheDate from './components/TheDate';
 import Savings from './components/Savings';
 import SummaryHeading from './components/SummaryHeading';
 import TaxBracket from './components/TaxBracket';
@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <Nav/>
-      <Date/>
+      <TheDate/>
       <WelcomeCom/>
       <SummaryHeading/>
       <TaxBracket/>
