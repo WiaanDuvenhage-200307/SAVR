@@ -25,17 +25,12 @@ const MonthlyExpenses = () => {
         <tr>
           <th>Household Member</th>
           <th>Expense</th>
-          <th>Expense Type</th>
           <th>Amount</th>
         </tr>
         {tableValues.map((number, index) => (
           <tr>
             <td>
-                <input 
-                    type="text"
-                    placeholder="Name" 
-                    aria-label="name"
-                />
+              <input type="text" placeholder="Name" aria-label="name" className="month-expenses-input"/>
             </td>
             <td>
               <input
@@ -64,7 +59,9 @@ const MonthlyExpenses = () => {
             function={() => addNewRow(true)}
             name="Add Expense"
             className="button"
-          />
+          >
+            Add Expense
+          </button>
         </tr>
       </table>
     </div>

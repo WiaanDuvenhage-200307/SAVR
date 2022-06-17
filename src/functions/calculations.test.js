@@ -1,5 +1,6 @@
-import countTogether from './Calculations';
+import {countTogether} from './Calculations';
 import {average} from './Calculations';
+import {percentage} from './Calculations';
 
 describe("test our calulcation functions", () => {
     test('count numbers together', () => {

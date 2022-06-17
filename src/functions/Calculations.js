@@ -1,4 +1,4 @@
-export default function countTogether(numbers){
+export function countTogether(numbers){
     let sum = 0;
 
     for( let i = 0; i < numbers.length; i++){
@@ -17,5 +17,15 @@ export function average(numbers){
     }
 
     return sum/numbers.length;
+}
+
+export function percentage(numbers){
+    let sum = 0;
+
+    for (let i = 0; i < numbers.length; i++){
+        sum += numbers[i];
+    }
+
+    return sum/100*numbers.length;
 }
 

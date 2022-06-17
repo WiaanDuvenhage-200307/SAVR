@@ -9,7 +9,7 @@ const WelcomeCom = () => {
           Plan your budget <br /> and become a SAVR
         </h1>
         <h2>
-          Calculate your monthly expenses and plan your “financial spreadsheet”.
+          Calculate your monthly expenses and plan your "financial spreadsheet".
         </h2>
       </div>
 
