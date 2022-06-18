@@ -30,17 +30,17 @@ export default function Savings() {
     let percent = readSavePer.current.value;
     let saved = percent/100*income;
 
-    let obj = {
+    let savingsInputs = {
         incomes : income,
         months: month,
         percent: percent + "%",
         amountSave: saved
     }
 
-    console.log(obj);
+    console.log(savingsInputs);
 
-    setInputs((inputs) => (
-        [...inputs, obj]
+    setInputs((prevInputs) => (
+        [...prevInputs, savingsInputs]
     ))
 
     
@@ -54,39 +54,39 @@ export default function Savings() {
         <h1>Savings</h1>
         <h2>Enter below your income and the percentage you want to save.</h2>
         <div className="inputGroup">
-        <select name="monthDrop" id="" ref={monthDrop}>
-            <option value="January">Jan</option>
-            <option value="February">Feb</option>
-            <option value="March">Mar</option>
-            <option value="April">Apr</option>
-            <option value="May">May</option>
-            <option value="June">Jun</option>
-            <option value="July">Jul</option>
-            <option value="August">Aug</option>
-            <option value="September">Sep</option>
-            <option value="October">Oct</option>
-            <option value="November">Nov</option>
-            <option value="December">Dec</option>
-          </select>
-          <input
-            name="income"
-            type="number"
-            aria-label="incomeAmount"
-            className="house-income-input"
-            placeholder="Income"
-            ref={incomeVal}
-          />
-          <input
-            name="savingInput"
-            aria-label="savingPercent"
-            className="house-income-input"
-            type="number"
-            placeholder="Saving Amount (%)"
-            ref={readSavePer}
-          />
-          <button className="button" onClick={addToTable}>
-            Add Savings
-          </button>
+            <select name="monthDrop" id="" ref={monthDrop}>
+                <option value="January">Jan</option>
+                <option value="February">Feb</option>
+                <option value="March">Mar</option>
+                <option value="April">Apr</option>
+                <option value="May">May</option>
+                <option value="June">Jun</option>
+                <option value="July">Jul</option>
+                <option value="August">Aug</option>
+                <option value="September">Sep</option>
+                <option value="October">Oct</option>
+                <option value="November">Nov</option>
+                <option value="December">Dec</option>
+            </select>
+            <input
+                name="income"
+                type="number"
+                aria-label="incomeAmount"
+                className="house-income-input"
+                placeholder="Income"
+                ref={incomeVal}
+            />
+            <input
+                name="savingInput"
+                aria-label="savingPercent"
+                className="house-income-input"
+                type="number"
+                placeholder="Saving Amount (%)"
+                ref={readSavePer}
+            />
+            <button className="button" onClick={addToTable}>
+                Add Savings
+            </button>
         </div>
       </div>
       <div className="right">
@@ -99,7 +99,7 @@ export default function Savings() {
           </tr>
           {inputs.map(object => (
             <tr key={object.id}>
-                <td>{object.months}</td>
+                <td className="monthName">{object.months}</td>
                 <td>{object.incomes}</td>
                 <td>{object.percent}</td>
                 <td>{object.amountSave}</td>

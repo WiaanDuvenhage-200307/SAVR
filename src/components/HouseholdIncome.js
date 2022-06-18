@@ -1,19 +1,15 @@
 import React from "react";
-import Button from "./UI/Button";
-import { IconButton } from "@mui/material";
-import DeleteIcon from "@mui/icons-material/Delete";
 import { useState } from "react";
-import Input from "./UI/Input";
 import { countTogether } from "../functions/Calculations";
 
 const HouseholdIncome = () => {
-  const [formValues, setFormValues] = useState([0]);
+  const [formValues, setFormValues] = useState([]);
 
   const [status, setStatus] = useState("normal");
 
-  const [inputList, setInputList] = useState([{ names: "", income: null }]);
+  const [inputList, setInputList] = useState([{ names: "", income: "" }]);
 
-  const [total, setTotal] = useState(null);
+  const [total, setTotal] = useState("");
 
   // handle input change
   const handleInputChange = (e, index) => {
@@ -22,7 +18,6 @@ const HouseholdIncome = () => {
     list[index][name] = value;
     console.log(list);
     setInputList(list);
-    var sum = null;
   };
 
   // handle click event of the Remove button
@@ -31,17 +26,23 @@ const HouseholdIncome = () => {
     list.splice(index, 1);
     setInputList(list);
   };
-
+  let arr = [];
   // handle click event of the Add button
   const handleAddClick = () => {
-    setInputList([...inputList, { names: "", income: "" }]);
-  };
 
-  const countNumTogether = () => {
-    for (let i = 0; i < inputList.length; i++) {
-      setTotal(countTogether(inputList));
-      console.log(total);
+    setInputList([...inputList, { names: "", income: ""}]);
+
+
+    for (let i = 0; i < inputList.length; i++){
+
+        arr.push(+inputList[i].income);
+        console.log(arr);
+
+        setTotal(countTogether(arr));
+        console.log(+total);
     }
+
+
   };
 
   return (
@@ -70,18 +71,20 @@ const HouseholdIncome = () => {
             </div>
 
             {inputList.length !== 1 && (
-              <button className="button" onClick={() => handleRemoveClick(i)}>
+              <button className="button removeMember" onClick={() => handleRemoveClick(i)}>
                 Remove
               </button>
             )}
             {inputList.length - 1 === i && (
-              <button className="button" onClick={handleAddClick}>
+              <button className="button addMember" onClick={handleAddClick}>
                 Add Member
               </button>
             )}
+            
           </div>
         );
       })}
+      <h4>Total : ${total}</h4>
     </div>
   );
 };

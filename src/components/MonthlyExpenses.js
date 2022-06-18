@@ -1,21 +1,50 @@
 import React, { useState } from "react";
 import Button from "./UI/Button";
+import { countTogether } from "../functions/Calculations";
+import { tab } from "@testing-library/user-event/dist/tab";
 
 const MonthlyExpenses = () => {
-  const [tableValues, setTableValues] = useState([0]);
+    const [formValues, setFormValues] = useState([]);
 
-  const addNewRow = () => {
-    setTableValues([...tableValues, 0]);
-    console.log("fired");
-  };
-
-  const handleInputChange = (newNumber, index) => {
-    let changingFormValue = tableValues;
-    changingFormValue[index] = newNumber;
-
-    console.log(changingFormValue);
-    setTableValues(changingFormValue);
-  };
+    const [status, setStatus] = useState("normal");
+  
+    const [inputList, setInputList] = useState([{ names: "", income: "" }]);
+  
+    const [total, setTotal] = useState("");
+  
+    // handle input change
+    const handleInputChange = (e, index) => {
+      const { name, value } = e.target;
+      const list = [...inputList];
+      list[index][name] = value;
+      console.log(list);
+      setInputList(list);
+    };
+  
+    // handle click event of the Remove button
+    const handleRemoveClick = (index) => {
+      const list = [...inputList];
+      list.splice(index, 1);
+      setInputList(list);
+    };
+    let arr = [];
+    // handle click event of the Add button
+    const handleAddClick = () => {
+  
+      setInputList([...inputList, { names: "", income: ""}]);
+  
+  
+      for (let i = 0; i < inputList.length; i++){
+  
+          arr.push(+inputList[i].income);
+          console.log(arr);
+  
+          setTotal(countTogether(arr));
+          console.log(+total);
+      }
+  
+  
+    };
 
   return (
     <div className="month-expenses">
@@ -28,7 +57,7 @@ const MonthlyExpenses = () => {
           <th>Expense</th>
           <th>Amount</th>
         </tr>
-        {tableValues.map((number, index) => (
+        {inputList.map((x, i) => (
           <tr>
             <td>
               <input type="text" placeholder="Name" aria-label="name" className="month-expenses-input"/>
@@ -36,36 +65,29 @@ const MonthlyExpenses = () => {
             <td>
               <input
                 className="month-expenses-input"
-                onChange={(e) => handleInputChange(e.target.value)}
                 aria-label="expense-input"
                 type="text"
                 placeholder="Please Enter"
+                onChange={(e) => handleInputChange(e, i)}
               />
             </td>
             <td>
               <p>$</p>
               <input
                 className="month-expenses-input"
-                onChange={(e) => handleInputChange(+e.target.value)}
                 aria-label="amount"
                 type="number"
+                value={x.income}
                 placeholder="Amount"
+                onChange={(e) => handleInputChange(e, i)}
               />
             </td>
           </tr>
         ))}
 
         <tr>
-            <button
-            name="Add Expense"
-            className="button"
-            onClick={addNewRow}
-            >
-
-            Add Expense
-
-            </button>
-
+            <button name="Add Expense" className="button" onClick={handleAddClick}>Add Expense</button>
+            <h4>${total}</h4>
         </tr>
       </table>
     </div>

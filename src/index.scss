@@ -51,7 +51,7 @@ select{
 
 // Input Styling
 .house-income-input {
-  padding: 10px;
+  padding: 5px;
   background-color: transparent;
   border-bottom: 2px solid $white;
   border-top: 0;
@@ -62,6 +62,7 @@ select{
   font-size: 24px;
   font-weight: bold;
   color: $white;
+  margin-right: 10px;
 }
 
 .house-income-input:focus {
@@ -93,6 +94,16 @@ select{
   float: left;
   display: flex;
   flex-direction: column;
+
+  .addMember{
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .removeMember{
+    background-color: transparent;
+    border: 2px solid $green;
+  }
 
   .house-income__heading {
     font-size: 36px;
@@ -190,6 +201,7 @@ select{
   justify-content: space-between;
   align-items: center;
   padding: 0px 50px;
+  margin-top: 20px;
 
   h1 {
     font-size: 36px;
@@ -198,16 +210,11 @@ select{
 
 // Monthly Expenses  Styling
 .month-expenses {
-  width: 75%;
+  width: 100%;
   .row {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    margin-right: 20px;
-  }
-
-  h1 {
-    margin-right: 20px;
+    text-align: center;
   }
 }
 
@@ -326,19 +333,15 @@ table {
   }
 
   ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
-    border-radius: 10px;
+    background-color: $light-charcoal;
   }
 
   ::-webkit-scrollbar-thumb {
     background: $green;
-    border-radius: 10px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
     background: $white;
-    border-radius: 10px;
-    transition: 0.2s ease-in-out;
   }
 
   margin-left: 50px;
@@ -346,7 +349,7 @@ table {
   max-height: 50vh;
 
   .left {
-    width: 70%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -356,28 +359,45 @@ table {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        width: 70%;
+        width: 100%;
+        margin-top: 50px;
     }
 
-    input{
-        width: 100%;
-        margin-top: 5%;
+    select{
+        width: 10%;
+        display: flex;
+        text-align: center;
+        background-color: $light-charcoal;
+        border-radius: 10px;
+    }
+
+    select:focus{
+        outline: none;
+        border: none;
     }
 
     option{
         background-color: $green;
+        width: 20%;
     }
   }
+
   .right{
     width: 50%;
+    max-height: 20vh;
+    overflow-y: scroll;
 
     .savingsTable{
+        margin-top: 50px;
         td{
             color: $white;
             padding: 10px;
             border-bottom: none;
             background-color: $light-charcoal;
             text-align: center;
+        }
+        .monthName{
+            color: $green;
         }
     }
   }
