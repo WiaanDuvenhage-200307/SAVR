@@ -84,7 +84,7 @@ const HouseholdIncome = () => {
           </div>
         );
       })}
-      <h4>Total : ${total}</h4>
+      <h4 className="household-total">Total : ${total}</h4>
     </div>
   );
 };

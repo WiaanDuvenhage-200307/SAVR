@@ -8,19 +8,19 @@ const MonthlyExpenses = () => {
 
     const [status, setStatus] = useState("normal");
   
-    const [inputList, setInputList] = useState([{ names: "", income: "" }]);
+    const [inputList, setInputList] = useState([{ names: "", expenseType: "", income: "" }]);
   
     const [total, setTotal] = useState("");
   
     // handle input change
     const handleInputChange = (e, index) => {
-      const { name, value } = e.target;
-      const list = [...inputList];
-      list[index][name] = value;
-      console.log(list);
-      setInputList(list);
+        const { name, value } = e.target;
+        const list = [...inputList];
+        list[index][name] = value;
+        console.log(list);
+        setInputList(list);
     };
-  
+
     // handle click event of the Remove button
     const handleRemoveClick = (index) => {
       const list = [...inputList];
@@ -31,7 +31,7 @@ const MonthlyExpenses = () => {
     // handle click event of the Add button
     const handleAddClick = () => {
   
-      setInputList([...inputList, { names: "", income: ""}]);
+      setInputList([...inputList, { names: "", expenseType: "", income: "" }]);
   
   
       for (let i = 0; i < inputList.length; i++){
@@ -57,37 +57,43 @@ const MonthlyExpenses = () => {
           <th>Expense</th>
           <th>Amount</th>
         </tr>
-        {inputList.map((x, i) => (
-          <tr>
-            <td>
-              <input type="text" placeholder="Name" aria-label="name" className="month-expenses-input"/>
-            </td>
-            <td>
-              <input
-                className="month-expenses-input"
-                aria-label="expense-input"
-                type="text"
-                placeholder="Please Enter"
-                onChange={(e) => handleInputChange(e, i)}
-              />
-            </td>
-            <td>
-              <p>$</p>
-              <input
-                className="month-expenses-input"
-                aria-label="amount"
-                type="number"
-                value={x.income}
-                placeholder="Amount"
-                onChange={(e) => handleInputChange(e, i)}
-              />
-            </td>
-          </tr>
-        ))}
+        {inputList.map((x, i) => {
+            return(
+                <tr>
+                <td>
+                  <input name="names" value={x.names} type="text" placeholder="Name" aria-label="name" className="month-expenses-input" onChange={(e) => handleInputChange(e, i)}/>
+                </td>
+                <td>
+                  <input
+                    className="month-expenses-input"
+                    aria-label="expense-input"
+                    type="text"
+                    name="expenseType"
+                    placeholder="Please Enter"
+                    value={x.expenseType}
+                    onChange={(e) => handleInputChange(e, i)}
+                  />
+                </td>
+                <td>
+                  <p>$</p>
+                  <input
+                    className="month-expenses-input"
+                    aria-label="amount"
+                    type="number"
+                    name="income"
+                    placeholder="Amount"
+                    value={x.income}
+                    onChange={(e) => handleInputChange(e, i)}
+                  />
+                </td>
+              </tr>
+            )
+
+        })}
 
         <tr>
             <button name="Add Expense" className="button" onClick={handleAddClick}>Add Expense</button>
-            <h4>${total}</h4>
+            <h4 className="month-expenses__total">Total : ${total}</h4>
         </tr>
       </table>
     </div>

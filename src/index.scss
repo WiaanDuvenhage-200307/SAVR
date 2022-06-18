@@ -7,6 +7,22 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: $light-charcoal;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $green;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: $white;
+  }
+
 body {
   background: $charcoal;
 }
@@ -132,6 +148,7 @@ select{
       font-family: "Oswald", sans-serif;
       margin-left: 20px;
     }
+
   }
 
   .house-income__money {
@@ -147,6 +164,14 @@ select{
       font-size: 36px;
     }
   }
+  .household-total{
+    margin-top: 20px;
+    font-family: 'Lato', sans-serif;
+    color: $white;
+    font-size: 36px;
+    text-align: center;
+    width: 100%;
+}
 }
 
 /* Welcome Message Styling */
@@ -215,6 +240,13 @@ select{
     display: flex;
     flex-direction: row;
     text-align: center;
+  }
+
+  .month-expenses__total{
+    color: $white;
+    font-family: 'Lato';
+    font-size: 36px;
+    padding: 20px;
   }
 }
 
@@ -296,6 +328,7 @@ table {
 }
 
 .incomeAfterTaxCon{
+    display: flex;
     width: 95%;
     padding: 50px;
     background-color: $light-charcoal;
@@ -310,7 +343,15 @@ table {
     .left{
         display: flex;
         flex-direction: column;
-        width: 50%;
+        width: 30%;
+    }
+
+    .right{
+        display: flex;
+        width: 70%;
+        height: 20vh;
+        overflow: hidden;
+        overflow-y: scroll;
     }
 
     button{
@@ -322,27 +363,27 @@ table {
         margin-bottom: 10px;
         padding: 10px;
     }
+
+
+    .taxTable{
+        width: 100%;
+        td{
+            border-bottom: none;
+            text-align: center;
+            padding: 10px;
+            color: $white;
+            font-size: 24px;
+        }
+        
+    }
+
 }
 
 // Savings styling
 .savings {
     margin-bottom: 50px;
     display: flex;
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
 
-  ::-webkit-scrollbar-track {
-    background-color: $light-charcoal;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: $green;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: $white;
-  }
 
   margin-left: 50px;
   margin-right: 50px;
