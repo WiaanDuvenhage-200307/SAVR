@@ -118,18 +118,22 @@ Here are a couple of ways to clone this repo:
 
 ### Adding Household Members Incomes
 
-![image5](src/assets/Mockup3.jpg)
-Using JavaScript and React's `UseState()` and `UseRef()` hooks, I was able to capture the user's name and income and display it the DOM. After doing that I calculated all their incomes together and display it underneath
+![image5](src/assets/Function1.jpg)
+Using JavaScript and React's `UseState()` and `UseRef()` hooks, I was able to capture the user's name and income and display it the DOM. After doing that I calculated all their incomes together and display it underneath. The user will also be able to remove the user and the amount will be deducted.
 
-### Compare Page Features & Functionality
+### Adding Monthly Expenses
 
-![image6](src/components/assets/Mockup2.jpg)
-Using the API & chart.js I populated a radar chart. You need to type in the champions name, whether it is uppercase or lowercase, and it will append their statistics to the radar chart and give contextualised details on the bottom of each chart.
+![image6](src/assets/Function2.jpg)
+The household member would be able to add their name, their type of expense and lastly their expense amount and it will get added to the total at the bottom
 
-### Timeline Page Features & Functionality
+### Adding Tax on Incomes
 
-![image7](src/components/assets/Mockup3.jpg)
-Again, using the API & chart.js I generated a timeline chart which will display the previous and current players, playing for the team and for how long they have been playing. When the user clicks on the dropdown they can select a team and then the team's players will be appended to the chart on the y-axis and the years of when they played will be on the x-axis.
+![image7](src/assets/Function3.jpg)
+The household member can insert their income and based on the table above it will display how much tax they will pay based on their income.
+
+### Calculating how much members will save
+![image8](src/assets/Function4.jpg)
+Household Members can manually type in how much % they want to save from their income each month. It will then display on the right hand side. This has been done using the array method called `.map()`.
 
 <!-- CONCEPT PROCESS -->
 <!-- Briefly explain your concept ideation process -->
@@ -141,7 +145,7 @@ For my conceptual process, I took a look at websites such as Behance, Pinterest 
 
 ### Wireframes
 
-![image8](src/assets/wireframe.png)
+![image9](src/assets/wireframe.png)
 
 ## Development Process
 
