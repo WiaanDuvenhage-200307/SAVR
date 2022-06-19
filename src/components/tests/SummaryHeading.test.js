@@ -6,10 +6,10 @@ describe("Testing our Summary Heading Component", () => {
     test("Checking to see if the text of the component is rendering on the page", () => {
         render(<SummaryHeading/>);
 
-        const heading = screen.getByText("Summary");
+        const heading = screen.getByText("Summary"); 
         const subHeading = screen.getByText("A summarised view of your budget.");
         
-        expect(heading).toBeInTheDocument();
+        expect(heading).toBeInTheDocument(); 
         expect(subHeading).toBeInTheDocument();
     })
 })

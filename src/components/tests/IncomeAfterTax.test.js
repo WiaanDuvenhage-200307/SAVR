@@ -19,8 +19,8 @@ describe("Tesing our Income After Taxes component", () => {
 
         userEvent.type(input, "3600");
 
-        expect(input.value).toBe("3600");
-    })
+        expect(input.value).toBe("3600"); 
+    }) 
 
     test("checking to see if our button text is rendering correctly", () => {
         render(<IncomeAfterTax/>);
@@ -31,9 +31,9 @@ describe("Tesing our Income After Taxes component", () => {
 
     test("Checking to see if our table has rendered", () => {
         render(<IncomeAfterTax/>);
-        const tableHeading1 = screen.getByText("Income");
-        const tableHeading2 = screen.getByText("After Tax");
-        const tableHeading3 = screen.getByText("Applied Tax");
+        const tableHeading1 = screen.getByText("Income"); 
+        const tableHeading2 = screen.getByText("After Tax"); 
+        const tableHeading3 = screen.getByText("Applied Tax"); 
 
         expect(tableHeading1).toBeInTheDocument();
         expect(tableHeading2).toBeInTheDocument();

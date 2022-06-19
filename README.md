@@ -26,7 +26,7 @@
     
    <br />
    <br />
-   <a href="https://youtu.be/y_ktyHSNhaM">View Demo</a>
+   <a href="https://youtu.be/dRmRu0dk7a0">View Demo</a>
     ·
     <a href="https://github.com/WiaanDuvenhage-200307/SAVR/issues">Report Bug</a>
     ·
@@ -220,7 +220,7 @@ The aspects I learned outside of this class, is that I implemented SCSS into my 
 
 To see a run through of the application, click below:
 
-[View Demonstration](https://youtu.be/y_ktyHSNhaM)
+[View Demonstration](https://youtu.be/dRmRu0dk7a0)
 
 See the [open issues](https://github.com/WiaanDuvenhage-200307/SAVR/issues) for a list of proposed features (and known issues).
 
@@ -228,7 +228,7 @@ See the [open issues](https://github.com/WiaanDuvenhage-200307/SAVR/issues) for 
 
 ## Authors
 
-- **Wiaan Duvenhage** - [Wiaan Duvenhage](https://github.com/WiaanDuvenhage-200307)
+- **Wiaan Duvenhage** - [Github](https://github.com/WiaanDuvenhage-200307)
 
 <!-- LICENSE -->
 
@@ -251,9 +251,9 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 <!-- TODO Change this -->
 
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+- [Jest](https://jestjs.io/)
 - [Stack Overflow](https://stackoverflow.com/)
 - [React Snapshot Testing Resource](https://www.youtube.com/watch?v=wfFw05TaBfM&t=217s)
-- [removebg](https://www.remove.bg/)
-- [Font Awesome](https://fontawesome.com/)
 - [Cooolors](https://coolors.co/)
 - [Figma](https://www.figma.com/)
+- [My Pinterest Board](https://za.pinterest.com/doubleudeedesigns/budget-app/)

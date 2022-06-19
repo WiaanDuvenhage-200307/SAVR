@@ -6,7 +6,6 @@ import SummaryHeading from './components/SummaryHeading';
 import TaxBracket from './components/TaxBracket';
 import WelcomeCom from './components/WelcomeCom';
 import IncomeAfterTax from './components/IncomeAfterTax';
-// import AverageForm from './components/classActivities/AverageForm';
 
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
       <TaxBracket/>
       <IncomeAfterTax/>
       <Savings/>
-      {/* <AverageForm/> */}
     </div>
   );
 }

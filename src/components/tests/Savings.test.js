@@ -45,12 +45,12 @@ describe("testing our savings component", () => {
 
     test("Checking to see if our table has rendered", () => {
         render(<Savings/>);
-        const tableHeading1 = screen.getByText("Month");
+        const tableHeading1 = screen.getByText("Month"); 
         const tableHeading2 = screen.getByText("Income");
         const tableHeading3 = screen.getByText("Percentage Saved");
         const tableHeading4 = screen.getByText("Saved Amount");
 
-        expect(tableHeading1).toBeInTheDocument();
+        expect(tableHeading1).toBeInTheDocument(); 
         expect(tableHeading2).toBeInTheDocument();
         expect(tableHeading3).toBeInTheDocument();
         expect(tableHeading4).toBeInTheDocument();
