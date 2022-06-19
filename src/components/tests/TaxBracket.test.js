@@ -9,7 +9,7 @@ describe("Testing our Tax Bracket Component", () => {
         const tableHeading1 = screen.getByText("Income");
         const tableHeading2 = screen.getByText("Tax%");
 
-        expect(tableHeading1).toBeInTheDocument();
-        expect(tableHeading2).toBeInTheDocument();
+        expect(tableHeading1).toBeInTheDocument(); 
+        expect(tableHeading2).toBeInTheDocument(); 
     })
 })

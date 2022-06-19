@@ -19,14 +19,14 @@ describe("Checking to see if our table inputs are working correctly...", () => {
         render(<MonthlyExpenses/>);
         const fullNameInput = screen.getByLabelText(/name/i);
         const expenseInput = screen.getByLabelText(/expense-input/i);
-        const amountInput = screen.getByLabelText(/amount/i);
+        const amountInput = screen.getByLabelText(/amount/i); 
 
         userEvent.type(fullNameInput, "Wiaan Duvenhage"); // typing in values to 'names' input
         userEvent.type(expenseInput, "Groceries"); // typing in values to 'names' input
         userEvent.type(amountInput, "3600");
 
-        expect(fullNameInput.value).toBe("Wiaan Duvenhage");
+        expect(fullNameInput.value).toBe("Wiaan Duvenhage"); 
         expect(expenseInput.value).toBe("Groceries");
-        expect(amountInput.value).toBe("3600");
+        expect(amountInput.value).toBe("3600"); 
     })
 })

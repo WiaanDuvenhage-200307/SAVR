@@ -6,6 +6,6 @@ describe("testing our date component", () => {
         render(<TheDate/>)
         const date = screen.getByLabelText(/date/i);
 
-        expect(date).toBeInTheDocument();
+        expect(date).toBeInTheDocument(); 
     })
 })

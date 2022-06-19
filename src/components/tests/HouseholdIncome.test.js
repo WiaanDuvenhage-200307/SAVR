@@ -56,7 +56,7 @@ describe("Testing our form interaction...", () => {
 
         // re-render the tree
         tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
+        expect(tree).toMatchSnapshot(); 
     })
 
 

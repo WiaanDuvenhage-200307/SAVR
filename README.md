@@ -141,7 +141,7 @@ Household Members can manually type in how much % they want to save from their i
 
 ## Concept Process
 
-For my conceptual process, I took a look at websites such as Behance, Pinterest and Siteinspire. I also watched a few Rick and Morty episodes and took a look at the colors and played around with them in Figma and looked at sites like cooolors.co to have a sense of a good color palette.
+For my conceptual process, I aimed for a very dark theme approach for my designs, because I feel that no one likes to look at something with an immense amount of bright colors, and I think that dark theme trends are absolutely amazing. I have gotten all my inspiration from sites like Behance and Pinterest.
 
 ### Wireframes
 
@@ -203,6 +203,14 @@ The aspects I learned outside of this class, is that I implemented SCSS into my 
 ![image4](src/assets/Mockup4.jpg)
 ![image5](src/assets/Mockup5.jpg)
 <br>
+
+## The Tests
+
+### Test Coverage
+![image10](src/assets/CodeCoverage.jpg)
+
+### Test Summary
+![image11](src/assets/TestSummary.jpg)
 
 <!-- VIDEO DEMONSTRATION -->
 

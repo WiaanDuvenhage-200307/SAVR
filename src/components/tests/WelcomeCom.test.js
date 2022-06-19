@@ -15,6 +15,6 @@ describe("Testing if our welcome message", () => {
 
         const text = screen.getByText('Calculate your monthly expenses and plan your "financial spreadsheet".');
 
-        expect(text).toBeInTheDocument();
+        expect(text).toBeInTheDocument(); 
     })
 })
