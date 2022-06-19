@@ -141,7 +141,7 @@ For my conceptual process, I took a look at websites such as Behance, Pinterest 
 
 ### Wireframes
 
-![image8](src/components/assets/Compare-1.jpg) ![image9](src/components/assets/Compare.jpg) ![image10](src/components/assets/Dasboard.jpg)
+![image8](src/assets/wireframe.png)
 
 ## Development Process
 
