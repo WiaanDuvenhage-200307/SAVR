@@ -116,10 +116,10 @@ Here are a couple of ways to clone this repo:
 
 <!-- note how you can use your gitHub link. Just make a path to your assets folder -->
 
-### Dashboard Features & Functionality!
+### Adding Household Members Incomes
 
-![image5](src/components/assets/Mockup1.jpg)
-Using the API and chart.js, I populated a doughnut chart, which displays how many players play in each role. Next up using also the API and chart.js, I populated a polar chart which will display how many players originate from country x and lastly additional information will be given like how many pro players there are, how many teams are there currently and how many items are in the game.
+![image5](src/assets/Mockup3.jpg)
+Using JavaScript and React's `UseState()` and `UseRef()` hooks, I was able to capture the user's name and income and display it the DOM. After doing that I calculated all their incomes together and display it underneath
 
 ### Compare Page Features & Functionality
 
