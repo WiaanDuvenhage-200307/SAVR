@@ -11,12 +11,12 @@
 <!-- HEADER SECTION -->
 <h5 align="center" style="padding:0;margin:0;">Wiaan Duvenhage</h5>
 <h5 align="center" style="padding:0;margin:0;">200307</h5>
-<h6 align="center">DV202 - Unit Testing</h6>
+<h6 align="center">DV 202_V2 | Unit Testing</h6>
 </br>
 <p align="center">
 
   <a href="https://github.com/WiaanDuvenhage-200307/SAVR">
-    <img src="src\components\assets\new-logo.svg" alt="Logo" width="100px">
+    <img src="src\assets\Logo.svg" alt="Logo" width="100px">
   </a>
   
   <h3 align="center">SAVR</h3>
@@ -69,7 +69,7 @@
 
 ### Project Description
 
-Welcome to SAVR, a cool project I built using React, Node.js, chart.js 2 and a League of Legends API that I got from sportsdata.io. View the documentation <a href="https://sportsdata.io/developers/api-documentation/lol">here</a> .
+Welcome to SAVR! This is a cool budgeting app I built that calculates the total expenses of household members, add taxes to incomes, calculate the total amount of expenses each month and it will calculate the percentage amount of savings household members want to put away for a rainy day.
 
 ### Built With
 
@@ -77,6 +77,7 @@ Welcome to SAVR, a cool project I built using React, Node.js, chart.js 2 and a L
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 - [Jest](https://jestjs.io/)
 - [JavaScript](https://www.javascript.com/)
+- [SCSS](https://sass-lang.com/)
 
 <!-- GETTING STARTED -->
 <!-- Make sure to add appropriate information about what prerequesite technologies the user would need and also the steps to install your project on their own mashines -->
@@ -148,42 +149,33 @@ The `Development Process` is the technical implementations and functionality don
 
 ### Implementation Process
 
-- I used React, Chart.js, Node.js and an API endpoint to create this project. I implemented component-based development instead of classes. By doing this, I will be able to easily inject and eject components and sub-components into my project, making it refactorable and reusable instead of writing up classes I have to do everytime making it tedious and redundant. I also used the `{Link}` component from the `react-router-dom` dependency to navigate to my pages without the DOM flashing.
+- I used `npx create-react app` to create this React project. I implemented component-based development instead of classes. By doing this, I will be able to easily inject and eject components and sub-components into my project, making it refactorable and reusable instead of writing up classes I have to do everytime making it tedious and redundant.
 
--I also implemented a Font-Awesome icon library and used it for my navigation buttons
+-I implemented the jest library using `npm install --save-dev jest` to test my components
 
-- I implemented the `Browser Router` and `routing` into my project to use navigate to my various components. I also implemented seperate CSS files for each component that I created. I made all these components and I injected them in my `App.js` and used `index.js`for injecting my `BrowserRouter` to navigate to my pages/components.
+-Lastly I used SCSS (Sass) instead of css just because styling with it was just much simpler and much more readable 
 
-- For the dashboard I used React hooks like `useEffect, useState` to populate my charts and injecting `jsx` into my chart components so that I can view data from the API and see for example how many players are there per role. I wrote the data of my chart as a variable and in my `return` function I wrote `jsx` in my chart component for it to populate with API data.
-
-- For the compare page I had the same approach, but I used the `useRef` hook as well to reference to the search button that I am typing into. Something I also did different was my entire chart component was written in the `return` function. So whenever a user types in a champion's name it will check for it in the API and if it matches it will populate the chart with the champion's name, title and their stats.
-
-- And lastly, for the timeline page, I used the exact same concept for the compare page but instead of a search bar it is a dropdown of all the teams currently. I dynamically populated the dropdown with a `Array.map()` function and populated it with the team names from the API Data. It then checks if what the user clicks is valid and it populates the chart with the previous and current teammates of that clicked team.
 
 #### Highlights
 
 <!-- stipulated the highlight you experienced with the project -->
 
-- The highlight of this project was definitely working with React and Chart.js, implementing them and seeing how components work together along with the API data to create a sleek front-end design.
-
--Another highlight is seeing how the API data dynamically populates with the chart's and seeing how they function.
+- A highlight of this project was definitely getting my tests to pass and getting my functionality to work. It was a lot of struggles and late nights, but by the help of my peers and A LOT of research, I got all my tests to pass.
 
 #### Challenges
 
 <!-- stipulated the challenges you faced with the project and why you think you faced it or how you think you'll solve it (if not solved) -->
 
-- I struggled a lot to grasp the idea of React props, it is still something I do not fully understand but will dig into research and mini courses on the web and start learning how props really work.
-- I could not figure out why my data on my timeline component would only render after I inspect the page or zoom out/in.
-- I struggled with getting a final design/ color scheme going, but by help from my lecturer and tools online, I could overcome that obstacle.
-- I could not implement a current time, I kept getting an error message.
-- I also could not implement a preloader that loads whilst waiting for the API data to load, but it is something that I will be researching.
-- Something I also found tricky with, was implementing data on the timeline page and making it work with the type of chart that I used on that page, but help from peers got me through it.
+- I struggled getting my tests to pass because I didn't completely understand the syntax of the React Testing Library.
+- I struggled the grasp the concept of snapshots
+- Figuring out my frontend in relation to testing was a challenge to say the least, but I got it to work out nicely
+- My snapshot is passing but I kept getting a failed error message stating `tree.props.onMouseEnter() is not a function`, I will look into it through research, but I couldn not get it to work
 
 #### Above And Beyond
 
 <!-- TODO Change this! -->
 
-The aspects I learned outside of class time is that I made a timeline chart using a Bar chart but I managed to swap the x and y-axis around and that I managed to showcase the bar chart as a gantt chart, which is really cool!
+The aspects I learned outside of this class, is that I implemented SCSS into my project for a more readable css file structure.
 
 ### Future Implementation
 
@@ -191,13 +183,8 @@ The aspects I learned outside of class time is that I made a timeline chart usin
 
 <!-- stipulate functionality and improvements that can be implemented in the future. -->
 
-- My future implementation plannings are that I want to fix the timeline chart bug so that it will not only show the data once I zoom out or inspect the page.
-
-- Another implementation I want to do is by making the page responsive by implementing some kind of framework like Bootstrap of Tailwind-CSS.
-
--I also want to make it more visually appealing by adding the image of the champion on the compare page instead of just its name, but I think I would need a better API that will give me more data to work with.
-
-- I also want to add a "next tournament section" to the dashboard to show when is the next tournament and a countdown of it. Alongside that I want to add a "previous result" section which will show what team just played and who won.
+- For my future implementation is to test with async functions
+- Something I'm also looking to implement is way more snapshots in my test files
 
 <!-- MOCKUPS -->
 
