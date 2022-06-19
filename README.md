@@ -194,9 +194,10 @@ The aspects I learned outside of this class, is that I implemented SCSS into my 
 
 <!-- TODO Change this -->
 
-![image2](src/components/assets/Mockup4.jpg)
-![image3](src/components/assets/Mockup5.jpg)
-![image4](src/components/assets/Mockup6.jpg)
+![image2](src/assets/Mockup1.jpg)
+![image3](src/assets/Mockup3.jpg)
+![image4](src/assets/Mockup4.jpg)
+![image5](src/assets/Mockup5.jpg)
 <br>
 
 <!-- VIDEO DEMONSTRATION -->
