@@ -1,70 +1,259 @@
-# Getting Started with Create React App
+<!-- REPLACE ALL THE [WiaanDuvenhage-200307] TEXT WITH YOUR GITHUB PROFILE NAME & THE [SAVR] WITH THE NAME OF YOUR GITHUB PROJECT -->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- Repository Information & Links-->
+<br />
 
-## Available Scripts
+![GitHub repo size](https://img.shields.io/github/repo-size/WiaanDuvenhage-200307/SAVR)
+![GitHub watchers](https://img.shields.io/github/watchers/WiaanDuvenhage-200307/SAVR)
+![GitHub language count](https://img.shields.io/github/languages/count/WiaanDuvenhage-200307/SAVR)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/WiaanDuvenhage-200307/SAVR)
 
-In the project directory, you can run:
+<!-- HEADER SECTION -->
+<h5 align="center" style="padding:0;margin:0;">Wiaan Duvenhage</h5>
+<h5 align="center" style="padding:0;margin:0;">200307</h5>
+<h6 align="center">DV202 - Unit Testing</h6>
+</br>
+<p align="center">
 
-### `npm start`
+  <a href="https://github.com/WiaanDuvenhage-200307/SAVR">
+    <img src="src\components\assets\new-logo.svg" alt="Logo" width="100px">
+  </a>
+  
+  <h3 align="center">SAVR</h3>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  <p align="center">
+    A React project built using the React framework and tested using Jest and React Testing Library (RTL) .<br>
+    
+   <br />
+   <br />
+   <a href="https://youtu.be/y_ktyHSNhaM">View Demo</a>
+    ·
+    <a href="https://github.com/WiaanDuvenhage-200307/SAVR/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/WiaanDuvenhage-200307/SAVR/issues">Request Feature</a>
+</p>
+<!-- TABLE OF CONTENTS -->
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Table of Contents
 
-### `npm test`
+- [About the Project](#about-the-project)
+  - [Project Description](#project-description)
+  - [Built With](#built-with)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [How to install](#how-to-install)
+- [Features and Functionality](#features-and-functionality)
+- [Concept Process](#concept-process)
+  - [Ideation](#ideation)
+  - [Wireframes](#wireframes)
+- [Development Process](#development-process)
+  - [Implementation Process](#implementation-process)
+    - [Highlights](#highlights)
+    - [Challenges](#challenges)
+  - [Future Implementation](#peer-reviews)
+- [Final Outcome](#final-outcome)
+  - [Mockups](#mockups)
+  - [Video Demonstration](#video-demonstration)
+- [Conclusion](#conclusion)
+- [License](#license)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!--PROJECT DESCRIPTION-->
 
-### `npm run build`
+## About the Project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<!-- header image of project -->
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![image1](src/components/assets/Mockup4.jpg)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Project Description
 
-### `npm run eject`
+Welcome to SAVR, a cool project I built using React, Node.js, chart.js 2 and a League of Legends API that I got from sportsdata.io. View the documentation <a href="https://sportsdata.io/developers/api-documentation/lol">here</a> .
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Built With
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [React](https://reactjs.org/)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+- [Jest](https://jestjs.io/)
+- [JavaScript](https://www.javascript.com/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<!-- GETTING STARTED -->
+<!-- Make sure to add appropriate information about what prerequesite technologies the user would need and also the steps to install your project on their own mashines -->
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Getting Started
 
-## Learn More
+The following instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Installation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Here are a couple of ways to clone this repo:
 
-### Code Splitting
+1.  GitHub Desktop </br>
+    Enter `https://github.com/WiaanDuvenhage-200307/SAVR.git` into the URL field and press the `Clone` button.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2.  Clone Repository </br>
+    Run the following in the command-line to clone the project:
 
-### Analyzing the Bundle Size
+    ```sh
+    git clone https://github.com/WiaanDuvenhage-200307/SAVR.git
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+        Open `Software` and select `File | Open...` from the menu. Select cloned directory and press `Open` button
 
-### Making a Progressive Web App
+3.  Install Dependencies </br>
+    Run the following in the command-line to install all the required dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    ```sh
+    npm install
+    ```
 
-### Advanced Configuration
+<!-- FEATURES AND FUNCTIONALITY-->
+<!-- You can add the links to all of your imagery at the bottom of the file as references -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Features and Functionality
 
-### Deployment
+<!-- note how you can use your gitHub link. Just make a path to your assets folder -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Dashboard Features & Functionality!
 
-### `npm run build` fails to minify
+![image5](src/components/assets/Mockup1.jpg)
+Using the API and chart.js, I populated a doughnut chart, which displays how many players play in each role. Next up using also the API and chart.js, I populated a polar chart which will display how many players originate from country x and lastly additional information will be given like how many pro players there are, how many teams are there currently and how many items are in the game.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Compare Page Features & Functionality
+
+![image6](src/components/assets/Mockup2.jpg)
+Using the API & chart.js I populated a radar chart. You need to type in the champions name, whether it is uppercase or lowercase, and it will append their statistics to the radar chart and give contextualised details on the bottom of each chart.
+
+### Timeline Page Features & Functionality
+
+![image7](src/components/assets/Mockup3.jpg)
+Again, using the API & chart.js I generated a timeline chart which will display the previous and current players, playing for the team and for how long they have been playing. When the user clicks on the dropdown they can select a team and then the team's players will be appended to the chart on the y-axis and the years of when they played will be on the x-axis.
+
+<!-- CONCEPT PROCESS -->
+<!-- Briefly explain your concept ideation process -->
+<!-- here you will add things like wireframing, data structure planning, anything that shows your process. You need to include images-->
+
+## Concept Process
+
+For my conceptual process, I took a look at websites such as Behance, Pinterest and Siteinspire. I also watched a few Rick and Morty episodes and took a look at the colors and played around with them in Figma and looked at sites like cooolors.co to have a sense of a good color palette.
+
+### Wireframes
+
+![image8](src/components/assets/Compare-1.jpg) ![image9](src/components/assets/Compare.jpg) ![image10](src/components/assets/Dasboard.jpg)
+
+## Development Process
+
+The `Development Process` is the technical implementations and functionality done in the frontend and backend of the application.
+
+### Implementation Process
+
+- I used React, Chart.js, Node.js and an API endpoint to create this project. I implemented component-based development instead of classes. By doing this, I will be able to easily inject and eject components and sub-components into my project, making it refactorable and reusable instead of writing up classes I have to do everytime making it tedious and redundant. I also used the `{Link}` component from the `react-router-dom` dependency to navigate to my pages without the DOM flashing.
+
+-I also implemented a Font-Awesome icon library and used it for my navigation buttons
+
+- I implemented the `Browser Router` and `routing` into my project to use navigate to my various components. I also implemented seperate CSS files for each component that I created. I made all these components and I injected them in my `App.js` and used `index.js`for injecting my `BrowserRouter` to navigate to my pages/components.
+
+- For the dashboard I used React hooks like `useEffect, useState` to populate my charts and injecting `jsx` into my chart components so that I can view data from the API and see for example how many players are there per role. I wrote the data of my chart as a variable and in my `return` function I wrote `jsx` in my chart component for it to populate with API data.
+
+- For the compare page I had the same approach, but I used the `useRef` hook as well to reference to the search button that I am typing into. Something I also did different was my entire chart component was written in the `return` function. So whenever a user types in a champion's name it will check for it in the API and if it matches it will populate the chart with the champion's name, title and their stats.
+
+- And lastly, for the timeline page, I used the exact same concept for the compare page but instead of a search bar it is a dropdown of all the teams currently. I dynamically populated the dropdown with a `Array.map()` function and populated it with the team names from the API Data. It then checks if what the user clicks is valid and it populates the chart with the previous and current teammates of that clicked team.
+
+#### Highlights
+
+<!-- stipulated the highlight you experienced with the project -->
+
+- The highlight of this project was definitely working with React and Chart.js, implementing them and seeing how components work together along with the API data to create a sleek front-end design.
+
+-Another highlight is seeing how the API data dynamically populates with the chart's and seeing how they function.
+
+#### Challenges
+
+<!-- stipulated the challenges you faced with the project and why you think you faced it or how you think you'll solve it (if not solved) -->
+
+- I struggled a lot to grasp the idea of React props, it is still something I do not fully understand but will dig into research and mini courses on the web and start learning how props really work.
+- I could not figure out why my data on my timeline component would only render after I inspect the page or zoom out/in.
+- I struggled with getting a final design/ color scheme going, but by help from my lecturer and tools online, I could overcome that obstacle.
+- I could not implement a current time, I kept getting an error message.
+- I also could not implement a preloader that loads whilst waiting for the API data to load, but it is something that I will be researching.
+- Something I also found tricky with, was implementing data on the timeline page and making it work with the type of chart that I used on that page, but help from peers got me through it.
+
+#### Above And Beyond
+
+<!-- TODO Change this! -->
+
+The aspects I learned outside of class time is that I made a timeline chart using a Bar chart but I managed to swap the x and y-axis around and that I managed to showcase the bar chart as a gantt chart, which is really cool!
+
+### Future Implementation
+
+<!-- TODO Change this! -->
+
+<!-- stipulate functionality and improvements that can be implemented in the future. -->
+
+- My future implementation plannings are that I want to fix the timeline chart bug so that it will not only show the data once I zoom out or inspect the page.
+
+- Another implementation I want to do is by making the page responsive by implementing some kind of framework like Bootstrap of Tailwind-CSS.
+
+-I also want to make it more visually appealing by adding the image of the champion on the compare page instead of just its name, but I think I would need a better API that will give me more data to work with.
+
+- I also want to add a "next tournament section" to the dashboard to show when is the next tournament and a countdown of it. Alongside that I want to add a "previous result" section which will show what team just played and who won.
+
+<!-- MOCKUPS -->
+
+## Final Outcome
+
+### Mockups
+
+<!-- TODO Change this -->
+
+![image2](src/components/assets/Mockup4.jpg)
+![image3](src/components/assets/Mockup5.jpg)
+![image4](src/components/assets/Mockup6.jpg)
+<br>
+
+<!-- VIDEO DEMONSTRATION -->
+
+### Video Demonstration
+
+<!-- TODO Change this -->
+
+To see a run through of the application, click below:
+
+[View Demonstration](https://youtu.be/y_ktyHSNhaM)
+
+See the [open issues](https://github.com/WiaanDuvenhage-200307/SAVR/issues) for a list of proposed features (and known issues).
+
+<!-- AUTHORS -->
+
+## Authors
+
+- **Wiaan Duvenhage** - [Wiaan Duvenhage](https://github.com/WiaanDuvenhage-200307)
+
+<!-- LICENSE -->
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.\
+
+<!-- LICENSE -->
+
+## Contact
+
+- **Wiaan Duvenhage** - [wiaanduvenhage.dev@gmail.com](mailto:wiaanduvenhage.dev@gmail.com) - [@wiaan.dev](https://www.instagram.com/wiaan.dev/)
+- **Project Link** - https://github.com/WiaanDuvenhage-200307/SAVR
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## Acknowledgements
+
+<!-- all resources that you used and Acknowledgements here -->
+<!-- TODO Change this -->
+
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+- [Stack Overflow](https://stackoverflow.com/)
+- [React Snapshot Testing Resource](https://www.youtube.com/watch?v=wfFw05TaBfM&t=217s)
+- [removebg](https://www.remove.bg/)
+- [Font Awesome](https://fontawesome.com/)
+- [Cooolors](https://coolors.co/)
+- [Figma](https://www.figma.com/)

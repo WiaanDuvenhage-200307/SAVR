@@ -31,7 +31,7 @@ describe("Testing our form interaction...", () => {
         render(<HouseholdIncome/>);
         const addButton = screen.getByText(/Add Member/i);
 
-       const clickedBtn =  fireEvent.click(screen.getByText('Add Member'));
+        const clickedBtn =  fireEvent.click(screen.getByText('Add Member'));
     })
 
     // ? SNAPSHOT
